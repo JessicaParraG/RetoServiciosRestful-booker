@@ -8,6 +8,7 @@ ext {
 
 dependencies {
     implementation "com.intuit.karate:karate-junit5:${karateVersion}"
+    testImplementation 'junit:junit:4.13.1'
 }
 
 sourceSets {
