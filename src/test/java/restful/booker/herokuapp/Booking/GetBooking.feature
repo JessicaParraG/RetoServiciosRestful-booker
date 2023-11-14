@@ -12,6 +12,20 @@ Feature: Get a booking
     Given path path, id
     When method Get
     Then status 200
-    And match response contains {firstname: 'Jose'}
-    And match response.lastname == '#string'
+    ##And match response contains {firstname: 'Jose'}
+    ##And match response.lastname == '#string'
+    And match each response.booking ==
+    """
+    {
+    "firstname": "#string",
+    "lastname": "#string",
+    "totalprice": 10000,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-01-04",
+      "checkout": "2024-01-20"
+    },
+    "additionalneeds": "Brunch"
+  }
+    """
     * print response

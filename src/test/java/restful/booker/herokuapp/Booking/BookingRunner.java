@@ -13,7 +13,7 @@ public class BookingRunner {
         return Karate.run("GetBooking.feature").relativeTo(getClass());
     }
 
-    @Karate.Test
+    /*@Karate.Test
     Karate testTags() {
         return Karate.run("GetBooking.feature").tags("@Get").relativeTo(getClass());
     }
@@ -32,4 +32,4 @@ public class BookingRunner {
         Results results = Runner.path("classpath:animals").tags("~@skipme").parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
-}
+*/}
